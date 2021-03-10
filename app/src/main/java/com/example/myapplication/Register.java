@@ -38,14 +38,10 @@ public class Register extends AppCompatActivity {
     public void Submit(View v){
         if (editTextTextPersonName.length() < 4 || editTextTextPersonName.length() > 13) {
             Toast.makeText(this,"Name must be longer than 4 characters and shorter than 13 characters",Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, FuckU.class);
-            startActivity(intent);
         }
         else
             if (editTextTextEmailAddress.length() < 8 || editTextTextEmailAddress.length() > 35){
                 Toast.makeText(this,"Email must be longer than 4 characters and shorter than 35 characters",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, FuckU.class);
-                startActivity(intent);
             }
             else
                 if (editTextTextEmailAddress.toString().indexOf('@') == -1){
@@ -62,11 +58,9 @@ public class Register extends AppCompatActivity {
                         else
                             if (editTextTextPassword.length() < 6 || editTextTextPassword.length() > 13){
                             Toast.makeText(this,"Password must be longer than 6 characters and shorter than 13 characters",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(this, FuckU.class);
-                            startActivity(intent);
                             }
                             else
-                                Toast.makeText(this, "You registered successfully!!! " + "Username:"+ String.valueOf(editTextTextPersonName.getText())+",Email:"+ String.valueOf(editTextTextEmailAddress.getText())+",Password:"+ String.valueOf(editTextTextPassword.getText()),Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, "You registered successfully!!! " + "Username:" + String.valueOf(editTextTextPersonName.getText()) + "Email:" + String.valueOf(editTextTextEmailAddress.getText()) + " Password:" + String.valueOf(editTextTextPassword.getText()),Toast.LENGTH_SHORT).show();
     }
 
 }
